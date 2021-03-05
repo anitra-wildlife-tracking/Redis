@@ -57,11 +57,11 @@ class ExtensionTest extends \Tester\TestCase
 
 		if (isset($sessionOptions['savePath'])) {
 			Assert::true(isset($sessionOptions['savePath']));
-			Assert::same('tcp://127.0.0.1:6379?weight=1&timeout=10&database=0&prefix=Nette.Session%3A', $sessionOptions['savePath']);
+			Assert::same('127.0.0.1:6379?weight=1&timeout=10&database=0&prefix=Nette.Session%3A', $sessionOptions['savePath']);
 
 		} else {
 			Assert::true(isset($sessionOptions['save_path']));
-			Assert::same('tcp://127.0.0.1:6379?weight=1&timeout=10&database=0&prefix=Nette.Session%3A', $sessionOptions['save_path']);
+			Assert::same('127.0.0.1:6379?weight=1&timeout=10&database=0&prefix=Nette.Session%3A', $sessionOptions['save_path']);
 		}
 
 		if (isset($sessionOptions['referer_check'])) {

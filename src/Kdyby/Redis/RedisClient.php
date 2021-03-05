@@ -633,7 +633,7 @@ class RedisClient implements \ArrayAccess
 			return $this->host;
 		}
 
-		return \sprintf('tcp://%s:%s', $this->host, $this->port ?: self::DEFAULT_PORT);
+		return \sprintf('%s:%s', $this->host, $this->port ?: self::DEFAULT_PORT);
 	}
 
 	/************************ syntax sugar ************************/
